@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Voters</title>
+    <link href='https://fonts.googleapis.com/css?family=Open Sans:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="one">
+        <span id="account"></span>
+        <h2>Add candidate</h2>
+        <form action="" onsubmit="App.addCandidate();">
+            <input type="text" id="add-name" placeholder="Candidate Name..."><br />
+            <input type="text" id="candidate_constituency" placeholder="Constituency"><br />
+            <button type="button" class="btn btn-primary" onclick="App.addCandidate();">Add Candidate</button>
+        </form>
+    </div>
+    <div class="two">
+        <h2>Vote for a candidate</h2>
+        <form action="" onsubmit="App.voteForCandidate();">
+            <input type="text" id="vote-candidate" placeholder="Input candidate name... " />
+            <input type="submit" class="btn btn-primary">
+        </form>
+    </div>
+    <div class="three">
+        <h2>ASPIRANTS:</h2>
+        <ul id="candidateList" class="list-unstyled">
+            <div class="CandidateTemplate" style="display: none">
+                <label>
+                    <span class="content">Candidate names go here</span>
+                </label>
+            </div>
+        </ul>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="vendor/truffle-contract/dist/truffle-contract.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
