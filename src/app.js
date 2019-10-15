@@ -82,7 +82,7 @@ App = {
           const candidateConstituency = candidate[1]
           const candidateVotes = candidate[2]
 
-          $('#candidateList').append(candidateName)
+          $('#candidateList').append("<br />" + candidateName)
           console.log(candidateName)
         }
       }
